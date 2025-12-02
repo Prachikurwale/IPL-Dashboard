@@ -1,0 +1,11 @@
+# backend/.gitignore
+
+# Dependencies
+/node_modules
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# Environment Variables
+.env

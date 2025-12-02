@@ -1,0 +1,161 @@
+ 
+
+:root {
+    --primary-color: #004d99;  
+    --secondary-color: #f6a822;  
+    --live-color: #d9534f;  
+    --completed-color: #5cb85c;  
+    --bg-color: #f4f4f9;
+    --card-bg: #ffffff;
+}
+ 
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    line-height: 1.6;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.matches-grid {
+    display: grid;
+     
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+ 
+.match-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.match-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Status Bar */
+.status {
+    font-weight: bold;
+    text-align: right;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+}
+
+.status.live {
+    color: var(--live-color);
+}
+
+.status.completed {
+    color: var(--completed-color);
+}
+
+/* Score Rows */
+.team-score {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px dashed #ddd;
+}
+
+.team-name {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.score-details {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.match-result {
+    margin-top: 15px;
+    padding-top: 10px;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #333;
+    border-top: 2px solid var(--secondary-color);
+}
+
+.loading-message, .error-message {
+    grid-column: 1 / -1; 
+    text-align: center;
+    padding: 50px;
+    color: #888;
+}
+
+ 
+
+ 
+
+@media screen and (max-width: 410px) {
+    
+     
+    .dashboard-container {
+        padding: 0 10px;  
+        margin: 10px auto;
+    }
+ 
+    .header {
+        padding: 1rem 0;  
+    }
+    
+    .header h1 {
+        font-size: 1.4rem;  
+        line-height: 1.2;  
+    }
+    
+    
+    .team-score {
+         
+        flex-direction: column; 
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    
+    .team-name {
+        font-size: 1rem;  
+    }
+    
+    .score-details {
+        margin-top: 3px;
+        font-size: 1rem;
+    }
+
+   
+    .matches-grid {
+        grid-template-columns: 1fr; 
+        gap: 15px;
+    }
+    
+    .match-card h3 {
+        font-size: 1.1rem;  
+        margin-bottom: 10px;
+    }
+}
+ 
+body {
+    overflow-x: hidden;
+}

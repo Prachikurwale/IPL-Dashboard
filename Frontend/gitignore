@@ -1,0 +1,13 @@
+# frontend/.gitignore
+
+# Dependencies
+/node_modules
+
+# Build output
+/dist
+/build
+/out
+
+# Environment Variables (Crucial for React/Vite/CRA)
+# This ignores all files that start with .env. (e.g., .env.local, .env.development, .env.production)
+.env.*
