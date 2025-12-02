@@ -1,4 +1,5 @@
 IPL Live Score Dashboard
+
 A responsive, full-stack application built using the MERN (MongoDB, Express, React, Node.js) stack to display live and completed IPL match scores.
 
 Key Features
