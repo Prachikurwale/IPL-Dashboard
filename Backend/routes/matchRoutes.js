@@ -4,7 +4,7 @@ const router = express.Router();
 const Match = require('../models/Match'); 
 
 
-router.get('/', async (req, res) => { 
+router.get('/api/matches', async (req, res) => { 
     try {
         const matches = await Match.find({});
         res.json(matches);

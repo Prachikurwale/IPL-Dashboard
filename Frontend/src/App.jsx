@@ -43,9 +43,10 @@ const App = () => {
     useEffect(() => {
         const fetchMatches = async () => {
             try {
-                const response = await fetch('/api/matches');
-             // const response = await fetch('http://localhost:5000/api/matches');
                 
+        
+             const response = await fetch('https://ipl-dashboard-1-xnjm.onrender.com/api/matches');
+
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
